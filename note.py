@@ -10,7 +10,7 @@ django-admin.py startproject [NOME DO PROJETO]
 python manage.py runserver
 
 # criar as tabelas do banco de dados
-python manage.py makemigrations e 
+python manage.py makemigrations 
 
 # enviar as as tabelas para o banco de dados
 python manage.py migrate
@@ -22,5 +22,6 @@ python manage.py startapp core
 # nessa e em outras app's.
 
  
+
 
 
