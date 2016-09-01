@@ -21,7 +21,18 @@ python manage.py startapp core
 # core é o nome da app, contem coisa úteis para ser usado 
 # nessa e em outras app's.
 
- 
+# carregar o shell do python com o ambiente django
+python manage.py shell 
+
+# teste no shell para demonstrar a criação de templete
+>>> from django.template import Template, Context
+>>> template = Template("Bem vindo você esta na {{ usuario }}") 
+                                    # {{variavel no django}}
+>>> context = Context({"usuario" : "S.A. - automatic systems" })
+                        # dicionario = {"chave" : "conteúdo"}
+# rederizar o contexto
+>>> print(template.render(context))
+
 
 
 
