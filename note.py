@@ -33,6 +33,8 @@ python manage.py shell
 # rederizar o contexto
 >>> print(template.render(context))
 
+# tratamento de imagens: biblioteca Pillow
+pip install Pillow
 
 
 
