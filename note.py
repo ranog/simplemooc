@@ -36,5 +36,8 @@ python manage.py shell
 # tratamento de imagens: biblioteca Pillow
 pip install Pillow
 
+# criar administrator no django
+python manage.py createsuperuser
+
 
 
