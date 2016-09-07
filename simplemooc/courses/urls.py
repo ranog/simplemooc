@@ -1,3 +1,4 @@
+
 """simplemooc URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,12 +16,9 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from core import views
-
-
+from courses import views
 
 urlpatterns = [
-    url(r'^', include('core.urls', namespace='core')),
-    url(r'^cursos/', include('courses.urls', namespace='courses')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^$', views.index, name='index'),
 ]
+
