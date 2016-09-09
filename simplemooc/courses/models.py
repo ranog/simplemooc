@@ -18,8 +18,10 @@ class Course(models.Model):
 
     slug = models.SlugField('Atalho')
 
-    description = models.TextField('Descrição', blank=True)
+    description = models.TextField('Descrição Simples', blank=True)
     # blank=True, campo não obrigatorio
+
+    about = models.TextField('Sobre o Curso', blank=True)
 
     start_date = models.DateField(
         'Data de Início', null=True, blank=True
@@ -43,6 +45,12 @@ class Course(models.Model):
     # returna o nome dos cursos na pagina admin
     def __str__(self):
         return self.name       
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('courses:details', (), {'slug':self.slug})
+# return (namespace courses com valor details, \
+#         argumentos não nomeáveis, argumentos nomeáveis {dicionario})
 
     # mudar o nome da class Course para Curso ou Cursos
     # na pagina do admin
