@@ -30,9 +30,7 @@ def details(request, slug):
 
         if form.is_valid():
             context['is_valid'] = True
-            print(form.cleaned_data['name'])
-            print(form.cleaned_data['email'])
-            print(form.cleaned_data['message'])
+            form.send_mail(course)
             form = ContactCourse()
     else:
         form = ContactCourse()
