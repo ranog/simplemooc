@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     'core',
     'courses',
- 
+    'accounts', 
 ]
 
 MIDDLEWARE = [
@@ -120,17 +120,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+ 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+     os.path.join(BASE_DIR, "static"),
 ]
-
+ 
 STATIC_URL = '/static/'
-
+ 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'public/media')
-
+ 
 MEDIA_URL = '/media/'
-
+ 
 # E-mail
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -140,5 +140,11 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'email@gmail.com'
 EMAIL_HOST_PASSWORD = 'senha'
 EMAIL_PORT = 587
-
+ 
 CONTACT_EMAIL = 'contact@sa.org'
+
+# Auth
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'core:home'
+LOGOUT_URL = 'accounts:logout'
+
