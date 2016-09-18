@@ -18,6 +18,9 @@ from django.contrib.auth import views as auth_views
 from accounts import views
 
 urlpatterns = [
+    url(r'^$', views.dashboard, 
+        name='dashboard'),
+
     url(r'^entrar/$', auth_views.login, 
         {'template_name' : 'login.html'}, name='login'),
         #XXX não esquecer de colocar com a extenção: login.html   
@@ -27,5 +30,11 @@ urlpatterns = [
     
     url(r'^cadastre-se/$', views.register, 
         name='register'),
+    
+    url(r'^editar/$', views.edit, 
+        name='edit'),
+    
+    url(r'^editar_password/$', views.edit_password, 
+        name='edit_password'),
 ]
 

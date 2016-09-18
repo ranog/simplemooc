@@ -7,6 +7,9 @@ body {
     margin: 0 auto;
     line-height: 1.7em;
 }
+a {
+    color: #3b8bba;
+}
 .content{
     padding-top: 2em;
 }
@@ -71,8 +74,8 @@ body .primary-button {
     color: #fff;
 }
 .splash {
-    margin: 2em auto 0;
-    padding: 3em 0.5em;
+    margin: 0 auto;
+    padding: 1.5em 1em 0;
     background: #eee;
 }
 .splash .splash-head {
@@ -97,8 +100,7 @@ body .primary-button {
     display: inline-block;
 }
 .content .content-ribbon {
-    margin: 3em;
-    border-bottom: 1px solid #eee;
+    margin: 1.5em 3em;
 }
 .ribbon {
     background: #eee;
@@ -137,7 +139,7 @@ form.pure-form-aligned ul.errorlist li {
     font-weight: bold;
     font-size: 100%;
 }
-.pure-form input[type], textarea, select {
+.pure-form input[type], .pure-form textarea, .pure-form select {
     border: 2px solid #ddd;
     box-shadow: none;
     font-size: 100%;
@@ -164,3 +166,20 @@ a.pure-button-primary {
     border-radius: 5px;
     font-size: 120%;
 }
+.inner {
+    padding: 0em 1em;
+}
+.inner p {
+    margin-top: 0;
+}
+ul.breadcrumb {
+    padding: 0;
+}
+ul.breadcrumb li {
+    display: inline-block;
+}
+ul.breadcrumb li a {
+    display: inline-block;
+    padding: 0.3em 0.7em;
+}
+

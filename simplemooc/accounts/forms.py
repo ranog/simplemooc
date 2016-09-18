@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(label='E-mail')
 
-
     def clean_email(self):
         email = self.cleaned_data['email']
         
@@ -24,3 +23,21 @@ class RegisterForm(UserCreationForm):
             user.save()
 
         return user
+
+class EditAccountForm(forms.ModelForm):
+    
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        
+        queryset = User.objects.filter(
+            email=email).exclude(pk=self.instance.pk)
+        # vai retorna um booleano para verificar se o e-mail é unico.
+        if queryset.exists():
+            raise forms.ValidationError(
+                'Já existe usuário com este E-mail')
+
+        return email
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'first_name', 'last_name']
