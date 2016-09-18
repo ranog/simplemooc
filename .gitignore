@@ -1,0 +1,16 @@
+## python files to ignore
+*.pyc
+**/migrations/*  
+
+##
+*.src
+passenger_wsgi.py
+public/
+simplemooc_course
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
