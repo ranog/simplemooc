@@ -26,7 +26,7 @@ urlpatterns = [
         #XXX não esquecer de colocar com a extenção: login.html   
  
     url(r'^sair/$', auth_views.logout, 
-        {'next_page' : 'core:home'}, name='logout'),
+        {'next_page' : 'home'}, name='logout'),
     
     url(r'^cadastre-se/$', views.register, 
         name='register'),
