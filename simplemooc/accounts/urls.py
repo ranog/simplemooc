@@ -34,7 +34,7 @@ urlpatterns = [
     url(r'^editar/$', views.edit, 
         name='edit'),
     
-    url(r'^editar_password/$', views.edit_password, 
+    url(r'^editar-senha/$', views.edit_password, 
         name='edit_password'),
 ]
 
