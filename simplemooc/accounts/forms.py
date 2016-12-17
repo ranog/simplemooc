@@ -34,7 +34,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fileds = ['username', 'email']
+        fields = ['username', 'email']
 
 class EditAccountForm(forms.ModelForm):
     
