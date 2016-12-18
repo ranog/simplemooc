@@ -1,6 +1,5 @@
 ## python files to ignore
 *.pyc
-**/migrations/*  
 
 ##
 *.src
